@@ -92,4 +92,12 @@ class Tag extends Model implements Sortable
 
         return parent::setAttribute($key, $value);
     }
+
+    /**
+     * Get all of the owning taggable models.
+     */
+    public function taggable()
+    {
+        return $this->morphTo();
+    }
 }
